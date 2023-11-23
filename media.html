@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>media</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      box-sizing: border-box;
+      transition: 1s;
+      font-family: '微軟正黑體';
+    }
+    :root{
+      /* rwd文字配合 calc */
+      font-size: calc(0.75rem+1.125vw);
+      /* css原生變數 */
+      --primary:#0d6efd;
+      --secondary:#6c757d;
+      --success:#198754;
+      --info:#0dcaf0;
+      --warning:#ffc107;
+      --danger:#dc3545;
+    }
+    body{
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .container{
+      background: lightblue;
+      width: 100%;
+      height: 100%;
+      position: relative;
+    }
+    
+    img{
+      width: 50%;
+      margin: 5px;
+    }
+    
+    .item{
+      width: 95%;
+      background: #b6d0f6;
+      margin: auto;
+    }
+
+    .t {
+      margin: 10px;
+      display: flex;
+      flex-direction: column; /* 將子元素排列成一列 */
+      justify-content: center; /* 水平置中 */
+      align-items: center; /* 垂直置中 */
+      background:lightgreen;
+    }
+
+    h2{
+      text-align: left;
+    }
+
+    .border{
+      width: 95%;
+      height: 2px;
+      background: grey;
+    }
+
+    .isShow{
+      display: block;
+    }
+
+    @media (min-width:576px){
+        .isShow{
+        display: block;
+      }
+      img{
+        width: 30%;
+      }
+      .t{
+        width: 90%;
+        flex-wrap: wrap;
+      }
+
+      .border{
+        width: 90%;
+      }
+    }
+
+    @media (min-width:768px){
+      .isShow{
+        display: none;
+      }
+      img{
+        width: 20%;
+      }
+      .t{
+        width: 40%;
+        flex-wrap: wrap;
+      }
+      .border{
+        position: absolute;
+        transform: rotate(30deg);
+        transform-origin: right bottom;
+        width: 40%;
+      }
+    }
+
+    @media (min-width:996px){
+      .isShow{
+        display: none;
+      }
+      img{
+        width: 20%;
+      }
+    }
+
+
+
+
+  </style>
+</head>
+<body>
+  <div class="container">
+      <div class="item">
+        <div class="t">
+          <img src="./media_query/wda.png" alt="">
+          <h1>泰山職訓局</h1>
+          <h2>從零開始的網頁設計課程</h2>
+          <div class="text isShow">
+            轉職網頁開發人員 掌握就業必備職能 <br>
+            由淺入深學習技術 強化職場的競爭力
+          </div>
+          <div class="border"></div>
+        </div>
+        <div class="t">
+          <img src="./media_query/html.png" alt="">
+          <h2>Html</h2>
+          <div class="text isShow">
+            超文本標記語言是一種用於建立網頁的標準標記語言。HTML是一種基礎技術，常與CSS、JavaScript一起被眾多網站用於設計網頁、網頁應用程式以及行動應用程式的使用者介面。網頁瀏覽器可以讀取HTML檔案，並將其彩現成視覺化網頁。HTML描述了一個網站的結構語意隨著線索的呈現，使之成為一種標記語言而非程式語言。
+          </div>
+        </div>
+        <div class="border"></div>
+        <div class="t">
+          <img src="./media_query/css.png" alt="">
+          <h2>CSS3</h2>
+          <div class="text isShow">
+            階層式樣式表是一種用來為結構化文件添加樣式的電腦語言，由W3C定義和維護。CSS3現在已被大部分現代瀏覽器支援，而下一版的CSS4仍在開發中。 CSS不僅可以靜態地修飾網頁，還可以配合各種手稿語言動態地對網頁各元素進行格式化。 
+          </div>
+        </div>
+        <div class="border"></div>
+
+        <div class="t">
+          <img src="./media_query/bs.png" alt="">
+          <h2>Bootstrap</h2>
+        </div>
+        <div class="border"></div>
+
+        <div class="t">
+          <img src="./media_query/sass.png" alt="">
+          <h2>Sass</h2>
+        </div>
+        <div class="border"></div>
+
+        <div class="t">
+          <img src="./media_query/vue.png" alt="">
+          <h2>Vue.js</h2>
+        </div>
+        <div class="border"></div>
+
+        <div class="t">
+          <img src="./media_query/jq.png" alt="">
+          <h2>jQuery</h2>
+        </div>
+        <div class="border"></div>
+
+        <div class="t">
+          <img src="./media_query/js.png" alt="">
+          <h2>JavaScript</h2>
+        </div>
+      </div>
+  </div>
+  
+</body>
+</html>
